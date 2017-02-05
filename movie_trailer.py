@@ -8,6 +8,12 @@ class Movie ():
     """
 
     def __init__(self, title, storyline, poster_url, trailer_url):
+        """
+            - title: the movie title
+            - storyline: the short description about a movie
+            - poster_url: URL for a movie poster image
+            - trailer_url: URL for a movie trailer
+        """
         self.title = title
         self.storyline = storyline
         self.poster_image_url = poster_url
@@ -16,7 +22,7 @@ class Movie ():
     def show_trailer(self):
         webbrowser.open(self.trailer_youtube_url)
 
-# Metadata for my three favorite movies
+# This is the metadata of my three favorite movies
 
 die_hard = Movie(
     "Die Hard",
@@ -44,6 +50,9 @@ list_movies = [ die_hard, redemption, field_of_dreams ]
 
 def generate_movies_page(movies):
     """
-         Generate the movie page dynamically
+         This function generates the movie page dynamically
     """
     fresh_tomatoes.open_movies_page(movies)
+
+# This is the code to produce the web page.
+generate_movies_page(list_movies)
